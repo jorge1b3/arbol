@@ -3,4 +3,4 @@ set(CMAKE_CXX_STANDAR 20)
 set(CMAKE_CXX_STANDAR_REQUIRED ON)
 
 project(lista VERSION 1.0)
-add_executable(main main.cpp Arbol.cpp Arbol.h Node.h Lista.cpp Lista.h Hijo.h Hijo.cpp)
+add_executable(main main.cpp Node.h Lista.cpp Lista.h Hijo.h Node.cpp)

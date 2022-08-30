@@ -5,15 +5,15 @@
 #ifndef ARBOL_LISTA_H
 #define ARBOL_LISTA_H
 #include "Node.h"
-#include "Hijo.h"
 #include <string>
 
 class Lista {
 private:
     Node* top;
     Node* tail;
+    Node* padre;
 public:
-    void push(Hijo h);
+    void push(int value);
     Hijo pop();
     Hijo* operator[](int n);
     int size();

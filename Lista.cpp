@@ -7,18 +7,20 @@
 #include <string>
 
 
-void Lista::push(Hijo value) {
-    if(!top){
-        top = new Node(value, nullptr, nullptr);
-        tail = top;
+void Lista::push(int value) {
+    Node* n = new Node(value, nullptr, top ,this);
+    if (!top) {
+        top = n;
+        tail = n;
         return;
     }
-    tail = new Node(value,tail, nullptr);
+    tail->setNext(n);
+    tail = n;
 }
 
 
 Hijo Lista::pop() {
-    Hijo value = *tail->value;
+    Hijo value = tail->value;
     tail = tail->next;
     delete tail->back;
     tail->back = nullptr;
